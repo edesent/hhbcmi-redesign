@@ -9,6 +9,7 @@ const navLinks = [
   { href: "#visit", label: "Visit" },
   { href: "#events", label: "Events" },
   { href: "#calendar", label: "Calendar" },
+  { href: "/sermons", label: "Sermons" },
   { href: "#services", label: "Services" },
   { href: "#pastor", label: "Pastor" },
   { href: "#ministries", label: "Ministries" },
@@ -89,14 +90,6 @@ export default function Navbar() {
           >
             Give
           </a>
-          <a
-            href="https://www.youtube.com/@highlandhillsbaptistchurch4533/streams"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="button-light lift-link rounded-md border border-white/25 bg-white px-5 py-2.5 text-sm font-bold hover:bg-sky-100"
-          >
-            Watch Live
-          </a>
         </nav>
 
         <button
@@ -132,14 +125,6 @@ export default function Navbar() {
             className="mt-3 rounded-md bg-gold px-4 py-3 text-center text-base font-extrabold text-navy-950"
           >
             Give
-          </a>
-          <a
-            href="https://www.youtube.com/@highlandhillsbaptistchurch4533/streams"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="button-light mt-2 rounded-md bg-white px-4 py-3 text-center text-base font-bold"
-          >
-            Watch Live
           </a>
         </nav>
       </div>

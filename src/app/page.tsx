@@ -531,76 +531,18 @@ function Connect() {
           </div>
         </div>
 
-        <PhonePreview />
-      </div>
-    </section>
-  );
-}
-
-function PhonePreview() {
-  return (
-    <div className="relative mx-auto w-full max-w-[290px]">
-      <div className="absolute inset-x-8 bottom-1 h-16 rounded-full bg-navy-950/25 blur-2xl" />
-      <div className="relative rounded-[2.7rem] bg-navy-950 p-2.5 shadow-2xl ring-1 ring-white/10">
-        <div className="relative overflow-hidden rounded-[2.1rem]">
-          <div className="absolute left-1/2 top-2 z-20 h-5 w-24 -translate-x-1/2 rounded-full bg-black/85" />
-          <div className="relative flex h-[580px] flex-col bg-[linear-gradient(160deg,#061a34_0%,#0a2447_45%,#1f5f93_100%)] text-white">
-            <div className="flex items-center justify-between px-6 pb-2 pt-3 text-[0.7rem] font-semibold text-white/80">
-              <span>9:41</span>
-              <span className="flex items-center gap-1">
-                <span className="h-1.5 w-1.5 rounded-full bg-white/80" />
-                <span className="h-1.5 w-1.5 rounded-full bg-white/80" />
-                <span className="h-1.5 w-3 rounded-sm bg-white/80" />
-              </span>
-            </div>
-            <div className="flex items-center justify-between px-6 py-2">
-              <span className="font-serif text-sm font-semibold">
-                Highland Hills
-              </span>
-              <span className="rounded bg-white/15 px-2 py-1 text-[0.6rem] font-bold tracking-wide">
-                MENU
-              </span>
-            </div>
-            <div className="flex flex-1 flex-col justify-center px-6">
-              <p className="text-[0.6rem] font-extrabold uppercase tracking-wide text-sky-100">
-                Highland, Michigan
-              </p>
-              <p className="mt-1 font-script text-4xl leading-tight text-white">
-                A Place to Call Home
-              </p>
-              <p className="mt-3 text-[0.72rem] leading-5 text-white/70">
-                Christ-centered worship, Bible teaching, and a warm church
-                family.
-              </p>
-              <span className="button-light mt-4 inline-flex w-max items-center gap-1 rounded-md bg-white px-3 py-2 text-[0.65rem] font-extrabold">
-                Plan Your Visit
-              </span>
-            </div>
-            <div className="mx-4 mb-4 rounded-xl border border-white/15 bg-white/10 p-3 backdrop-blur">
-              <p className="text-[0.55rem] font-extrabold uppercase tracking-wide text-sky-100">
-                This Week
-              </p>
-              <div className="mt-2 space-y-2">
-                <div className="flex items-center justify-between">
-                  <span className="text-[0.72rem] font-bold">
-                    Morning Worship
-                  </span>
-                  <span className="button-light rounded bg-white px-2 py-0.5 text-[0.6rem] font-extrabold">
-                    11:00 AM
-                  </span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-[0.72rem] font-bold">Bible Study</span>
-                  <span className="button-light rounded bg-white px-2 py-0.5 text-[0.6rem] font-extrabold">
-                    Wed 7 PM
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="relative mx-auto w-full max-w-sm">
+          <div className="absolute inset-x-10 bottom-4 h-16 rounded-full bg-navy-950/20 blur-2xl" />
+          <Image
+            src="/hhbc-iphone-mockup.png"
+            alt="Highland Hills Baptist Church Facebook page on a phone"
+            width={947}
+            height={1300}
+            className="relative h-auto w-full"
+          />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
