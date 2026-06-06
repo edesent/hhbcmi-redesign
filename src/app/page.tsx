@@ -99,16 +99,11 @@ function Hero() {
 
       <div className="section-shell relative z-10 grid items-end gap-10 lg:grid-cols-[minmax(0,1fr)_370px]">
         <div className="w-full max-w-[calc(100vw-32px)] lg:max-w-3xl">
-          <p className="mb-3 font-script text-4xl leading-tight text-gold sm:text-5xl">
-            A Place to Call Home
-          </p>
           <p className="fine-label mb-4 text-sky-100">
             Highland, Michigan | Independent Baptist Church
           </p>
-          <h1 className="font-serif text-4xl font-semibold leading-[1.04] text-white sm:text-6xl lg:text-7xl">
-            <span className="block">A welcoming church</span>
-            <span className="block">family in the heart</span>
-            <span className="block">of Highland.</span>
+          <h1 className="font-script text-5xl font-semibold leading-[1.1] text-white sm:text-7xl lg:text-8xl">
+            A Place to Call Home
           </h1>
           <p className="mt-7 max-w-2xl text-lg leading-8 text-white/80 sm:text-xl">
             Join Highland Hills Baptist Church for Christ-centered worship,
