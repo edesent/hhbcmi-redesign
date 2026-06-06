@@ -9,6 +9,16 @@ export const metadata: Metadata = {
   description:
     "Watch recent sermons and services from Highland Hills Baptist Church in Highland, Michigan.",
   alternates: { canonical: "/sermons" },
+  openGraph: {
+    title: "Sermons & Services | Highland Hills Baptist Church",
+    description:
+      "Watch recent sermons and livestreamed services from Highland Hills Baptist Church in Highland, Michigan.",
+    url: "https://www.hhbcmi.com/sermons",
+    type: "website",
+    locale: "en_US",
+    siteName: "Highland Hills Baptist Church",
+    images: ["/hero-poster.jpg"],
+  },
 };
 
 const CHANNEL_URL =

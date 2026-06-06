@@ -43,9 +43,17 @@ const ministries = [
 const churchSchema = {
   "@context": "https://schema.org",
   "@type": "Church",
+  "@id": "https://www.hhbcmi.com/#church",
   name: "Highland Hills Baptist Church",
+  alternateName: "HHBC",
+  description:
+    "An independent Baptist church in Highland, Michigan offering Sunday School, Morning and Evening Worship, and Wednesday prayer and Bible study.",
   url: "https://www.hhbcmi.com",
   telephone: "+1-248-887-0698",
+  email: "highlandhillsbaptistchurch1611@gmail.com",
+  image: "https://www.hhbcmi.com/hero-poster.jpg",
+  logo: "https://www.hhbcmi.com/highland-hills-baptist-logo.svg",
+  priceRange: "Free",
   address: {
     "@type": "PostalAddress",
     streetAddress: "179 Woodruff Lake Rd",
@@ -54,10 +62,81 @@ const churchSchema = {
     postalCode: "48357",
     addressCountry: "US",
   },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 42.6710971,
+    longitude: -83.6212673,
+  },
+  hasMap: "https://maps.app.goo.gl/4PUyrLZwsXvrzKzf6",
+  areaServed: [
+    "Highland, MI",
+    "Highland Township, MI",
+    "White Lake, MI",
+    "Milford, MI",
+    "Hartland, MI",
+    "Oakland County, MI",
+  ],
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Sunday",
+      opens: "10:00",
+      closes: "12:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Sunday",
+      opens: "18:00",
+      closes: "19:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Wednesday",
+      opens: "19:00",
+      closes: "20:00",
+    },
+  ],
   sameAs: [
     "https://www.facebook.com/HHBC1611/",
     "https://www.youtube.com/@highlandhillsbaptistchurch4533",
   ],
+};
+
+const campMeetingSchema = {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  name: "Camp Meeting",
+  description:
+    "A week of preaching, worship, and fellowship under the tent at Highland Hills Baptist Church. All are welcome.",
+  startDate: "2026-06-07",
+  endDate: "2026-06-12",
+  eventStatus: "https://schema.org/EventScheduled",
+  eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+  image: "https://www.hhbcmi.com/camp-meeting.jpg",
+  location: {
+    "@type": "Place",
+    name: "Highland Hills Baptist Church",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "179 Woodruff Lake Rd",
+      addressLocality: "Highland",
+      addressRegion: "MI",
+      postalCode: "48357",
+      addressCountry: "US",
+    },
+  },
+  organizer: {
+    "@type": "Church",
+    name: "Highland Hills Baptist Church",
+    url: "https://www.hhbcmi.com",
+  },
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "USD",
+    availability: "https://schema.org/InStock",
+    url: "https://www.hhbcmi.com/",
+  },
 };
 
 export default function Home() {
@@ -66,6 +145,10 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(churchSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(campMeetingSchema) }}
       />
       <Navbar />
       <main id="home" className="overflow-hidden bg-cream">

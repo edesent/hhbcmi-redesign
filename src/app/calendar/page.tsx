@@ -8,6 +8,16 @@ export const metadata: Metadata = {
   description:
     "Services, events, and special meetings at Highland Hills Baptist Church in Highland, Michigan.",
   alternates: { canonical: "/calendar" },
+  openGraph: {
+    title: "Church Calendar | Highland Hills Baptist Church",
+    description:
+      "Services, events, and special meetings at Highland Hills Baptist Church in Highland, Michigan.",
+    url: "https://www.hhbcmi.com/calendar",
+    type: "website",
+    locale: "en_US",
+    siteName: "Highland Hills Baptist Church",
+    images: ["/hero-poster.jpg"],
+  },
 };
 
 export default function CalendarPage() {

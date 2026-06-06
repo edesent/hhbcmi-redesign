@@ -27,13 +27,40 @@ export const metadata: Metadata = {
     template: "%s | Highland Hills Baptist Church",
   },
   description:
-    "Highland Hills Baptist Church in Highland, Michigan. Join us Sundays for Sunday School, Morning Worship, Evening Worship, and Wednesday prayer and Bible study.",
+    "Highland Hills Baptist Church is an independent Baptist church in Highland, Michigan. Join us Sundays for Sunday School, Morning Worship, and Evening Worship, and Wednesdays for prayer and Bible study. Visitors and families welcome.",
+  applicationName: "Highland Hills Baptist Church",
+  authors: [{ name: "Highland Hills Baptist Church" }],
+  creator: "Highland Hills Baptist Church",
+  publisher: "Highland Hills Baptist Church",
+  category: "religion",
+  keywords: [
+    "Highland Hills Baptist Church",
+    "Baptist church Highland MI",
+    "independent Baptist church",
+    "church in Highland Michigan",
+    "Highland MI church",
+    "Sunday worship Highland",
+    "Bible study Highland MI",
+    "church near me Highland Michigan",
+  ],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
     title: "Highland Hills Baptist Church | Highland, MI",
     description:
-      "A welcoming Baptist church family in Highland, Michigan. Plan your visit, see service times, and stay connected.",
+      "A welcoming independent Baptist church family in Highland, Michigan. Plan your visit, watch sermons, see service times, and stay connected.",
     url: "https://www.hhbcmi.com",
     type: "website",
+    locale: "en_US",
     siteName: "Highland Hills Baptist Church",
     images: [
       {
@@ -43,6 +70,13 @@ export const metadata: Metadata = {
         alt: "Aerial view of Highland Hills Baptist Church",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Highland Hills Baptist Church | Highland, MI",
+    description:
+      "A welcoming independent Baptist church family in Highland, Michigan. Plan your visit and watch sermons online.",
+    images: ["/hero-poster.jpg"],
   },
   icons: {
     icon: "/favicon.png",
