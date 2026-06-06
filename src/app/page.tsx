@@ -70,6 +70,7 @@ export default function Home() {
         <Hero />
         <ActionBar />
         <Welcome />
+        <Events />
         <ServiceRhythm />
         <Pastor />
         <Ministries />
@@ -234,8 +235,7 @@ function Welcome() {
         <div>
           <p className="fine-label mb-4 text-blue-700">Welcome Home</p>
           <h2 className="font-serif text-4xl font-semibold leading-tight text-navy-950 sm:text-5xl">
-            Clear next steps, warm people, and a Sunday rhythm that is easy to
-            join.
+            Clear next steps, warm people, and a Sunday that is easy to join.
           </h2>
           <p className="mt-6 text-lg leading-8 text-muted">
             Whether you are new to church, new to the area, or looking for a
@@ -263,6 +263,95 @@ function Welcome() {
   );
 }
 
+function Events() {
+  const schedule = [
+    {
+      icon: CalendarDays,
+      label: "Mornings",
+      detail: "Tuesday–Friday at 10:00 AM",
+    },
+    {
+      icon: Clock3,
+      label: "Evenings",
+      detail: "Monday–Friday at 7:00 PM",
+    },
+    {
+      icon: MapPin,
+      label: "Location",
+      detail: "Highland Hills Baptist Church",
+    },
+  ];
+
+  return (
+    <section id="events" className="bg-navy-950 py-24 text-white">
+      <div className="section-shell">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="fine-label mb-4 text-sky-100">Upcoming Event</p>
+          <h2 className="font-serif text-4xl font-semibold sm:text-5xl">
+            You&rsquo;re invited to Camp Meeting.
+          </h2>
+        </div>
+
+        <div className="mt-12 grid overflow-hidden rounded-lg border border-white/10 bg-white/5 soft-shadow lg:grid-cols-2">
+          <div className="relative min-h-[260px] lg:min-h-full">
+            <Image
+              src="/camp-meeting.jpg"
+              alt="Camp Meeting at Highland Hills Baptist Church"
+              fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover"
+            />
+          </div>
+
+          <div className="p-8 sm:p-10">
+            <span className="button-light inline-flex items-center gap-2 rounded-md bg-white px-4 py-2 text-sm font-extrabold">
+              <CalendarDays className="h-4 w-4" />
+              June 7&ndash;12
+            </span>
+            <h3 className="mt-6 font-serif text-3xl font-semibold">
+              Camp Meeting
+            </h3>
+            <p className="mt-3 leading-7 text-white/70">
+              A week of preaching, worship, and fellowship under the tent. All
+              are welcome &mdash; bring your family and a friend.
+            </p>
+
+            <div className="mt-7 space-y-4">
+              {schedule.map((item) => {
+                const Icon = item.icon;
+
+                return (
+                  <div key={item.label} className="flex items-start gap-4">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-white/10 text-gold">
+                      <Icon className="h-5 w-5" />
+                    </span>
+                    <div>
+                      <p className="text-sm font-bold text-white">
+                        {item.label}
+                      </p>
+                      <p className="text-sm text-white/70">{item.detail}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            <a
+              href="https://maps.app.goo.gl/4PUyrLZwsXvrzKzf6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button-light lift-link mt-8 inline-flex items-center justify-center gap-2 rounded-md bg-white px-7 py-4 text-sm font-extrabold hover:bg-sky-100"
+            >
+              Get Directions
+              <ArrowRight className="h-4 w-4" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function ServiceRhythm() {
   return (
     <section id="services" className="bg-white-soft py-24">
@@ -270,7 +359,7 @@ function ServiceRhythm() {
         <div className="mx-auto max-w-3xl text-center">
           <p className="fine-label mb-4 text-blue-700">Weekly Service Times</p>
           <h2 className="font-serif text-4xl font-semibold text-navy-950 sm:text-5xl">
-            A simple weekly rhythm for worship, prayer, and Bible study.
+            A simple weekly schedule for worship, prayer, and Bible study.
           </h2>
         </div>
 
@@ -303,25 +392,25 @@ function Pastor() {
   return (
     <section id="pastor" className="bg-cream py-24 sm:py-28">
       <div className="section-shell grid items-center gap-12 lg:grid-cols-[0.85fr_1.15fr]">
-        <div className="rounded-lg bg-navy-900 p-10 text-center text-white soft-shadow">
-          <span className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-white p-3">
+        <figure className="overflow-hidden rounded-lg border border-sky-100 bg-white soft-shadow">
+          <div className="relative aspect-square">
             <Image
-              src="/hhbc-mark.svg"
-              alt="Highland Hills Baptist Church"
-              width={72}
-              height={72}
-              className="h-16 w-16"
+              src="/pastor-matt-and-wife.png"
+              alt="Pastor Matt Leathley and his wife, Meaghan"
+              fill
+              sizes="(min-width: 1024px) 40vw, 100vw"
+              className="object-cover"
             />
-          </span>
-          <h3 className="mt-7 font-serif text-3xl font-semibold">
-            Pastor Matt Leathley
-          </h3>
-          <p className="fine-label mt-3 text-sky-100">Senior Pastor</p>
-          <div className="mx-auto mt-6 h-px w-16 bg-white/20" />
-          <p className="mt-6 leading-7 text-white/70">
-            Serving Highland Hills Baptist Church alongside his wife, Meaghan.
-          </p>
-        </div>
+          </div>
+          <figcaption className="px-6 py-5 text-center">
+            <p className="font-serif text-2xl font-semibold text-navy-950">
+              Pastor Matt Leathley
+            </p>
+            <p className="fine-label mt-1 text-blue-700">
+              Senior Pastor · with his wife, Meaghan
+            </p>
+          </figcaption>
+        </figure>
 
         <div>
           <p className="fine-label mb-4 text-blue-700">Meet Our Pastor</p>
@@ -516,31 +605,26 @@ function Location() {
 
 function Footer() {
   return (
-    <footer className="bg-navy-950 py-12 text-white">
+    <footer className="border-t border-sky-100 bg-white-soft py-12 text-navy-950">
       <div className="section-shell flex flex-col items-center justify-between gap-8 text-center md:flex-row md:text-left">
-        <div className="flex items-center gap-4">
+        <div>
           <Image
-            src="/hhbc-mark.svg"
-            alt=""
-            width={58}
-            height={58}
-            className="h-14 w-14 rounded-full bg-white p-2"
+            src="/highland-hills-baptist-logo-dark.svg"
+            alt="Highland Hills Baptist Church"
+            width={300}
+            height={85}
+            className="mx-auto h-auto w-56 md:mx-0"
           />
-          <div>
-            <p className="font-serif text-xl font-semibold text-white">
-              Highland Hills Baptist Church
-            </p>
-            <p className="mt-2 text-sm text-white/60">
-              179 Woodruff Lake Rd | Highland, MI 48357 | (248) 887-0698
-            </p>
-          </div>
+          <p className="mt-3 text-sm text-muted">
+            179 Woodruff Lake Rd | Highland, MI 48357 | (248) 887-0698
+          </p>
         </div>
         <div className="flex gap-3">
           <a
             href="https://www.facebook.com/HHBC1611/"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-md border border-white/20 px-4 py-2 text-sm font-bold text-white/80 hover:bg-white/10 hover:text-white"
+            className="rounded-md border border-navy-900/20 px-4 py-2 text-sm font-bold text-navy-950 hover:bg-sky-100"
           >
             Facebook
           </a>
@@ -548,7 +632,7 @@ function Footer() {
             href="https://www.youtube.com/@highlandhillsbaptistchurch4533"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-md border border-white/20 px-4 py-2 text-sm font-bold text-white/80 hover:bg-white/10 hover:text-white"
+            className="rounded-md border border-navy-900/20 px-4 py-2 text-sm font-bold text-navy-950 hover:bg-sky-100"
           >
             YouTube
           </a>
