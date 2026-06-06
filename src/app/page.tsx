@@ -538,8 +538,19 @@ function Pastor() {
 
 function Ministries() {
   return (
-    <section id="ministries" className="bg-navy-950 py-24 text-white">
-      <div className="section-shell grid gap-12 lg:grid-cols-[0.75fr_1.25fr]">
+    <section
+      id="ministries"
+      className="relative overflow-hidden bg-navy-950 py-24 text-white"
+    >
+      <Image
+        src="/life-together.jpg"
+        alt="Highland Hills Baptist Church congregation gathered for worship"
+        fill
+        sizes="100vw"
+        className="object-cover"
+      />
+      <div className="absolute inset-0 bg-navy-950/88" />
+      <div className="section-shell relative z-10 grid gap-12 lg:grid-cols-[0.75fr_1.25fr]">
         <div>
           <p className="fine-label mb-4 text-sky-100">Life Together</p>
           <h2 className="font-serif text-4xl font-semibold leading-tight sm:text-5xl">
