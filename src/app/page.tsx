@@ -168,7 +168,7 @@ function ActionBar() {
       icon: HeartHandshake,
     },
     {
-      href: "https://maps.app.goo.gl/4PUyrLZwsXvrzKzf6",
+      href: "#location",
       label: "Find Us",
       text: "179 Woodruff Lake Rd",
       icon: MapPin,
