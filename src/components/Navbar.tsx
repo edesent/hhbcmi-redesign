@@ -15,7 +15,6 @@ const navLinks = [
   { href: "/salvation", label: "Salvation" },
   { href: "#ministries", label: "Ministries" },
   { href: "#connect", label: "Connect" },
-  { href: "#location", label: "Location" },
 ];
 
 export default function Navbar() {
