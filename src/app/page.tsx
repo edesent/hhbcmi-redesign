@@ -427,7 +427,7 @@ function Connect() {
               href="https://www.facebook.com/HHBC1611/"
               target="_blank"
               rel="noopener noreferrer"
-              className="lift-link inline-flex items-center justify-center rounded-md bg-navy-900 px-7 py-4 text-sm font-extrabold text-white hover:bg-navy-800"
+              className="lift-link inline-flex items-center justify-center rounded-md bg-navy-900 px-7 py-4 text-sm font-extrabold text-white! hover:bg-navy-800"
             >
               Visit Facebook
             </a>
