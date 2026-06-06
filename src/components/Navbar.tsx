@@ -8,6 +8,7 @@ const navLinks = [
   { href: "#home", label: "Home" },
   { href: "#visit", label: "Visit" },
   { href: "#events", label: "Events" },
+  { href: "#calendar", label: "Calendar" },
   { href: "#services", label: "Services" },
   { href: "#pastor", label: "Pastor" },
   { href: "#ministries", label: "Ministries" },
@@ -35,7 +36,11 @@ export default function Navbar() {
     event.preventDefault();
 
     const target = document.querySelector(href);
-    if (!target) return;
+    if (!target) {
+      // Not on the home page (e.g. /calendar) — jump back home to the section.
+      window.location.href = `/${href}`;
+      return;
+    }
 
     const top = target.getBoundingClientRect().top + window.scrollY - 84;
     window.scrollTo({ top, behavior: "smooth" });
@@ -78,10 +83,17 @@ export default function Navbar() {
             </a>
           ))}
           <a
+            href="#give"
+            onClick={(event) => goToSection(event, "#give")}
+            className="lift-link ml-2 rounded-md bg-gold px-5 py-2.5 text-sm font-extrabold text-navy-950 hover:brightness-105"
+          >
+            Give
+          </a>
+          <a
             href="https://www.youtube.com/@highlandhillsbaptistchurch4533/streams"
             target="_blank"
             rel="noopener noreferrer"
-            className="button-light lift-link ml-2 rounded-md border border-white/25 bg-white px-5 py-2.5 text-sm font-bold hover:bg-sky-100"
+            className="button-light lift-link rounded-md border border-white/25 bg-white px-5 py-2.5 text-sm font-bold hover:bg-sky-100"
           >
             Watch Live
           </a>
@@ -115,10 +127,17 @@ export default function Navbar() {
             </a>
           ))}
           <a
+            href="#give"
+            onClick={(event) => goToSection(event, "#give")}
+            className="mt-3 rounded-md bg-gold px-4 py-3 text-center text-base font-extrabold text-navy-950"
+          >
+            Give
+          </a>
+          <a
             href="https://www.youtube.com/@highlandhillsbaptistchurch4533/streams"
             target="_blank"
             rel="noopener noreferrer"
-            className="button-light mt-3 rounded-md bg-white px-4 py-3 text-center text-base font-bold"
+            className="button-light mt-2 rounded-md bg-white px-4 py-3 text-center text-base font-bold"
           >
             Watch Live
           </a>

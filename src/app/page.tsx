@@ -5,12 +5,14 @@ import {
   CalendarDays,
   Clock3,
   Globe2,
+  HandHeart,
   HeartHandshake,
   MapPin,
   PlayCircle,
   UsersRound,
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
+import CalendarFeed from "@/components/CalendarFeed";
 
 const serviceTimes = [
   { day: "Sunday", title: "Sunday School", time: "10:00 AM" },
@@ -71,10 +73,12 @@ export default function Home() {
         <ActionBar />
         <Welcome />
         <Events />
+        <CalendarFeed />
         <ServiceRhythm />
         <Pastor />
         <Ministries />
         <Connect />
+        <Give />
         <Location />
       </main>
       <Footer />
@@ -84,7 +88,7 @@ export default function Home() {
 
 function Hero() {
   return (
-    <section className="relative flex min-h-[92vh] items-end overflow-hidden bg-navy-950 pb-10 pt-36 text-white sm:min-h-screen sm:pb-14">
+    <section className="relative flex min-h-[92vh] items-center overflow-hidden bg-navy-950 pb-16 pt-36 text-white sm:min-h-screen">
       <video
         autoPlay
         muted
@@ -95,60 +99,54 @@ function Hero() {
       >
         <source src="/hero-video.mp4" type="video/mp4" />
       </video>
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,26,52,0.92)_0%,rgba(6,26,52,0.72)_48%,rgba(6,26,52,0.34)_100%)]" />
-      <div className="absolute inset-x-0 bottom-0 h-1/2 bg-[linear-gradient(0deg,#061a34_0%,rgba(6,26,52,0)_100%)]" />
+      <div className="absolute inset-0 bg-navy-950/60" />
+      <div className="absolute inset-x-0 bottom-0 h-2/3 bg-[linear-gradient(0deg,#061a34_0%,rgba(6,26,52,0)_100%)]" />
 
-      <div className="section-shell relative z-10 grid items-end gap-10 lg:grid-cols-[minmax(0,1fr)_370px]">
-        <div className="w-full max-w-[calc(100vw-32px)] lg:max-w-3xl">
-          <p className="fine-label mb-4 text-sky-100">
-            Highland, Michigan | Independent Baptist Church
-          </p>
-          <h1 className="font-script text-5xl font-semibold leading-[1.1] text-white sm:text-7xl lg:text-8xl">
-            A Place to Call Home
-          </h1>
-          <p className="mt-7 max-w-2xl text-lg leading-8 text-white/80 sm:text-xl">
-            Join Highland Hills Baptist Church for Christ-centered worship,
-            Bible teaching, prayer, and a warm place for your family to belong.
-          </p>
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <a
-              href="#visit"
-              className="button-light lift-link inline-flex items-center justify-center gap-2 rounded-md bg-white px-7 py-4 text-sm font-extrabold hover:bg-sky-100"
-            >
-              Plan Your Visit
-              <ArrowRight className="h-4 w-4" />
-            </a>
-            <a
-              href="https://www.youtube.com/@highlandhillsbaptistchurch4533/streams"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="lift-link inline-flex items-center justify-center gap-2 rounded-md border border-white/30 px-7 py-4 text-sm font-extrabold text-white hover:bg-white/10"
-            >
-              <PlayCircle className="h-4 w-4" />
-              Watch Live
-            </a>
-          </div>
+      <div className="section-shell relative z-10 mx-auto flex max-w-3xl flex-col items-center text-center">
+        <h1 className="font-script text-6xl font-semibold leading-[1.05] text-white sm:text-7xl lg:text-8xl">
+          A Place to Call Home
+        </h1>
+        <p className="fine-label mt-5 text-sky-100">
+          Highland, Michigan · Independent Baptist Church
+        </p>
+        <p className="mt-6 max-w-2xl text-lg leading-8 text-white/80 sm:text-xl">
+          Join Highland Hills Baptist Church for Christ-centered worship, Bible
+          teaching, prayer, and a warm place for your family to belong.
+        </p>
+        <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:justify-center">
+          <a
+            href="#visit"
+            className="button-light lift-link inline-flex items-center justify-center gap-2 rounded-md bg-white px-7 py-4 text-sm font-extrabold hover:bg-sky-100"
+          >
+            Plan Your Visit
+            <ArrowRight className="h-4 w-4" />
+          </a>
+          <a
+            href="https://www.youtube.com/@highlandhillsbaptistchurch4533/streams"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="lift-link inline-flex items-center justify-center gap-2 rounded-md border border-white/30 px-7 py-4 text-sm font-extrabold text-white hover:bg-white/10"
+          >
+            <PlayCircle className="h-4 w-4" />
+            Watch Live
+          </a>
         </div>
 
-        <aside className="rounded-lg border border-white/15 bg-white/10 p-5 shadow-2xl backdrop-blur-md">
-          <p className="fine-label text-sky-100">This Week</p>
-          <div className="mt-5 space-y-4">
-            {serviceTimes.slice(0, 4).map((service) => (
-              <div
-                key={`${service.day}-${service.title}`}
-                className="flex flex-col items-start gap-2 border-b border-white/10 pb-4 last:border-0 last:pb-0 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
-              >
-                <div>
-                  <p className="text-sm font-bold text-white">{service.title}</p>
-                  <p className="text-sm text-white/60">{service.day}</p>
-                </div>
-                <p className="button-light shrink-0 rounded-md bg-white px-3 py-2 text-sm font-extrabold">
-                  {service.time}
-                </p>
-              </div>
-            ))}
-          </div>
-        </aside>
+        <div className="mt-12 flex flex-wrap items-center justify-center gap-3">
+          {serviceTimes.slice(0, 3).map((service) => (
+            <div
+              key={`${service.day}-${service.title}`}
+              className="flex items-center gap-2.5 rounded-md border border-white/15 bg-white/10 px-4 py-2.5 backdrop-blur-md"
+            >
+              <span className="text-sm font-bold text-white">
+                {service.title}
+              </span>
+              <span className="button-light rounded bg-white px-2 py-0.5 text-xs font-extrabold">
+                {service.time}
+              </span>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -235,7 +233,8 @@ function Welcome() {
         <div>
           <p className="fine-label mb-4 text-blue-700">Welcome Home</p>
           <h2 className="font-serif text-4xl font-semibold leading-tight text-navy-950 sm:text-5xl">
-            Clear next steps, warm people, and a Sunday that is easy to join.
+            Clear next steps, warm people, and a Sunday where it&rsquo;s easy to
+            visit.
           </h2>
           <p className="mt-6 text-lg leading-8 text-muted">
             Whether you are new to church, new to the area, or looking for a
@@ -532,15 +531,105 @@ function Connect() {
           </div>
         </div>
 
-        <div className="relative mx-auto w-full max-w-sm">
-          <div className="absolute inset-x-10 bottom-4 h-16 rounded-full bg-navy-950/20 blur-2xl" />
-          <Image
-            src="/hhbc-iphone-mockup.png"
-            alt="Highland Hills Baptist Church Facebook page on a phone"
-            width={947}
-            height={1300}
-            className="relative h-auto w-full"
-          />
+        <PhonePreview />
+      </div>
+    </section>
+  );
+}
+
+function PhonePreview() {
+  return (
+    <div className="relative mx-auto w-full max-w-[290px]">
+      <div className="absolute inset-x-8 bottom-1 h-16 rounded-full bg-navy-950/25 blur-2xl" />
+      <div className="relative rounded-[2.7rem] bg-navy-950 p-2.5 shadow-2xl ring-1 ring-white/10">
+        <div className="relative overflow-hidden rounded-[2.1rem]">
+          <div className="absolute left-1/2 top-2 z-20 h-5 w-24 -translate-x-1/2 rounded-full bg-black/85" />
+          <div className="relative flex h-[580px] flex-col bg-[linear-gradient(160deg,#061a34_0%,#0a2447_45%,#1f5f93_100%)] text-white">
+            <div className="flex items-center justify-between px-6 pb-2 pt-3 text-[0.7rem] font-semibold text-white/80">
+              <span>9:41</span>
+              <span className="flex items-center gap-1">
+                <span className="h-1.5 w-1.5 rounded-full bg-white/80" />
+                <span className="h-1.5 w-1.5 rounded-full bg-white/80" />
+                <span className="h-1.5 w-3 rounded-sm bg-white/80" />
+              </span>
+            </div>
+            <div className="flex items-center justify-between px-6 py-2">
+              <span className="font-serif text-sm font-semibold">
+                Highland Hills
+              </span>
+              <span className="rounded bg-white/15 px-2 py-1 text-[0.6rem] font-bold tracking-wide">
+                MENU
+              </span>
+            </div>
+            <div className="flex flex-1 flex-col justify-center px-6">
+              <p className="text-[0.6rem] font-extrabold uppercase tracking-wide text-sky-100">
+                Highland, Michigan
+              </p>
+              <p className="mt-1 font-script text-4xl leading-tight text-white">
+                A Place to Call Home
+              </p>
+              <p className="mt-3 text-[0.72rem] leading-5 text-white/70">
+                Christ-centered worship, Bible teaching, and a warm church
+                family.
+              </p>
+              <span className="button-light mt-4 inline-flex w-max items-center gap-1 rounded-md bg-white px-3 py-2 text-[0.65rem] font-extrabold">
+                Plan Your Visit
+              </span>
+            </div>
+            <div className="mx-4 mb-4 rounded-xl border border-white/15 bg-white/10 p-3 backdrop-blur">
+              <p className="text-[0.55rem] font-extrabold uppercase tracking-wide text-sky-100">
+                This Week
+              </p>
+              <div className="mt-2 space-y-2">
+                <div className="flex items-center justify-between">
+                  <span className="text-[0.72rem] font-bold">
+                    Morning Worship
+                  </span>
+                  <span className="button-light rounded bg-white px-2 py-0.5 text-[0.6rem] font-extrabold">
+                    11:00 AM
+                  </span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-[0.72rem] font-bold">Bible Study</span>
+                  <span className="button-light rounded bg-white px-2 py-0.5 text-[0.6rem] font-extrabold">
+                    Wed 7 PM
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Give() {
+  return (
+    <section id="give" className="bg-navy-950 py-24 text-white">
+      <div className="section-shell">
+        <div className="mx-auto max-w-2xl text-center">
+          <span className="button-light mx-auto flex h-14 w-14 items-center justify-center rounded-md bg-white">
+            <HandHeart className="h-6 w-6" />
+          </span>
+          <p className="fine-label mt-6 text-sky-100">Give</p>
+          <h2 className="mt-3 font-serif text-4xl font-semibold sm:text-5xl">
+            Support the ministry of HHBC.
+          </h2>
+          <p className="mt-6 text-lg leading-8 text-white/70">
+            Your generosity helps us preach the gospel, care for our church
+            family, and reach our community and the mission field. Giving online
+            is simple and secure.
+          </p>
+          <a
+            href="https://giving.servantkeeper.com/hhbc-8/419"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="button-light lift-link mt-9 inline-flex items-center justify-center gap-2 rounded-md bg-white px-7 py-4 text-sm font-extrabold hover:bg-sky-100"
+          >
+            Give Online
+            <ArrowRight className="h-4 w-4" />
+          </a>
         </div>
       </div>
     </section>
