@@ -55,14 +55,6 @@ export default function Navbar() {
           aria-label="Highland Hills Baptist Church home"
         >
           <Image
-            src="/hhbc-mark.svg"
-            alt=""
-            width={52}
-            height={52}
-            className="h-11 w-11 rounded-full bg-white p-1.5"
-            priority
-          />
-          <Image
             src="/highland-hills-baptist-logo.svg"
             alt="Highland Hills Baptist Church"
             width={300}
