@@ -3,6 +3,7 @@
 @theme inline {
   --font-sans: var(--font-inter);
   --font-serif: var(--font-newsreader);
+  --font-script: var(--font-dancing);
 
   --color-navy-950: #061a34;
   --color-navy-900: #0a2447;

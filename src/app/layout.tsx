@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Newsreader } from "next/font/google";
+import { Dancing_Script, Inter, Newsreader } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -10,6 +10,12 @@ const inter = Inter({
 
 const newsreader = Newsreader({
   variable: "--font-newsreader",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const dancingScript = Dancing_Script({
+  variable: "--font-dancing",
   subsets: ["latin"],
   display: "swap",
 });
@@ -62,7 +68,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${newsreader.variable} antialiased`}
+      className={`${inter.variable} ${newsreader.variable} ${dancingScript.variable} antialiased`}
     >
       <body>{children}</body>
     </html>

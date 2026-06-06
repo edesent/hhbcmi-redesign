@@ -1,8 +1,10 @@
 import Image from "next/image";
 import {
   ArrowRight,
+  BookOpen,
   CalendarDays,
   Clock3,
+  Globe2,
   HeartHandshake,
   MapPin,
   PlayCircle,
@@ -69,6 +71,7 @@ export default function Home() {
         <ActionBar />
         <Welcome />
         <ServiceRhythm />
+        <Pastor />
         <Ministries />
         <Connect />
         <Location />
@@ -96,14 +99,9 @@ function Hero() {
 
       <div className="section-shell relative z-10 grid items-end gap-10 lg:grid-cols-[minmax(0,1fr)_370px]">
         <div className="w-full max-w-[calc(100vw-32px)] lg:max-w-3xl">
-          <Image
-            src="/place-to-call-home-blue.svg"
-            alt="A place to call home"
-            width={300}
-            height={55}
-            className="mb-7 h-auto w-64 rounded-md bg-white px-5 py-3 shadow-lg"
-            priority
-          />
+          <p className="mb-3 font-script text-4xl leading-tight text-gold sm:text-5xl">
+            A Place to Call Home
+          </p>
           <p className="fine-label mb-4 text-sky-100">
             Highland, Michigan | Independent Baptist Church
           </p>
@@ -306,6 +304,72 @@ function ServiceRhythm() {
   );
 }
 
+function Pastor() {
+  return (
+    <section id="pastor" className="bg-cream py-24 sm:py-28">
+      <div className="section-shell grid items-center gap-12 lg:grid-cols-[0.85fr_1.15fr]">
+        <div className="rounded-lg bg-navy-900 p-10 text-center text-white soft-shadow">
+          <span className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-white p-3">
+            <Image
+              src="/hhbc-mark.svg"
+              alt="Highland Hills Baptist Church"
+              width={72}
+              height={72}
+              className="h-16 w-16"
+            />
+          </span>
+          <h3 className="mt-7 font-serif text-3xl font-semibold">
+            Pastor Matt Leathley
+          </h3>
+          <p className="fine-label mt-3 text-sky-100">Senior Pastor</p>
+          <div className="mx-auto mt-6 h-px w-16 bg-white/20" />
+          <p className="mt-6 leading-7 text-white/70">
+            Serving Highland Hills Baptist Church alongside his wife, Meaghan.
+          </p>
+        </div>
+
+        <div>
+          <p className="fine-label mb-4 text-blue-700">Meet Our Pastor</p>
+          <h2 className="font-serif text-4xl font-semibold leading-tight text-navy-950 sm:text-5xl">
+            A faithful shepherd for the church family.
+          </h2>
+          <p className="mt-6 text-lg leading-8 text-muted">
+            Pastor Matt Leathley has served as Senior Pastor of Highland Hills
+            Baptist Church since January 2024, after first ministering to the
+            congregation as assistant pastor. Before coming to Highland, he
+            spent a decade in missionary work across the Congo (DRC) and South
+            Africa.
+          </p>
+          <p className="mt-4 text-lg leading-8 text-muted">
+            Together with his wife, Meaghan, he leads HHBC with a heart for
+            consistent Bible preaching and teaching, faithful care for the
+            congregation, and a steady reach into the community and the foreign
+            mission field.
+          </p>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2">
+            <div className="flex items-start gap-4 rounded-lg border border-sky-100 bg-white p-5">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-navy-900 text-white">
+                <BookOpen className="h-5 w-5" />
+              </span>
+              <p className="text-sm font-bold leading-6 text-navy-950">
+                Consistent Bible preaching &amp; teaching
+              </p>
+            </div>
+            <div className="flex items-start gap-4 rounded-lg border border-sky-100 bg-white p-5">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-navy-900 text-white">
+                <Globe2 className="h-5 w-5" />
+              </span>
+              <p className="text-sm font-bold leading-6 text-navy-950">
+                Community outreach &amp; foreign missions
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Ministries() {
   return (
     <section id="ministries" className="bg-navy-950 py-24 text-white">
@@ -468,13 +532,9 @@ function Footer() {
             className="h-14 w-14 rounded-full bg-white p-2"
           />
           <div>
-            <Image
-              src="/highland-hills-baptist-logo.svg"
-              alt="Highland Hills Baptist Church"
-              width={300}
-              height={85}
-              className="h-auto w-56"
-            />
+            <p className="font-serif text-xl font-semibold text-white">
+              Highland Hills Baptist Church
+            </p>
             <p className="mt-2 text-sm text-white/60">
               179 Woodruff Lake Rd | Highland, MI 48357 | (248) 887-0698
             </p>
