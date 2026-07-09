@@ -314,10 +314,10 @@ function Welcome() {
         </div>
 
         <div>
-          <p className="fine-label mb-4 text-blue-700">Welcome Home</p>
+          <p className="fine-label mb-4 text-blue-700">A Place to Belong</p>
           <h2 className="font-serif text-4xl font-semibold leading-tight text-navy-950 sm:text-5xl">
-            Clear next steps, warm people, and a Sunday where it&rsquo;s easy to
-            visit.
+            Real people, faithful preaching, and an easy first Sunday in
+            Highland.
           </h2>
           <p className="mt-6 text-lg leading-8 text-muted">
             Whether you are new to church, new to the area, or looking for a
