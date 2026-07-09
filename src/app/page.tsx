@@ -102,17 +102,17 @@ const churchSchema = {
   ],
 };
 
-const campMeetingSchema = {
+const vbsSchema = {
   "@context": "https://schema.org",
   "@type": "Event",
-  name: "Camp Meeting",
+  name: "Emerald Crossing VBS",
   description:
-    "A week of preaching, worship, and fellowship under the tent at Highland Hills Baptist Church. All are welcome.",
-  startDate: "2026-06-07",
-  endDate: "2026-06-12",
+    "Vacation Bible School at Highland Hills Baptist Church — Emerald Crossing: An Irish Adventure Through Psalm 23. A week of Bible lessons, songs, crafts, and fun for kids. All are welcome.",
+  startDate: "2026-08-03T18:30",
+  endDate: "2026-08-07T20:15",
   eventStatus: "https://schema.org/EventScheduled",
   eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-  image: "https://www.hhbcmi.com/camp-meeting.jpg",
+  image: "https://www.hhbcmi.com/vbs.jpg",
   location: {
     "@type": "Place",
     name: "Highland Hills Baptist Church",
@@ -148,7 +148,7 @@ export default function Home() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(campMeetingSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(vbsSchema) }}
       />
       <Navbar />
       <main id="home" className="overflow-hidden bg-cream">
@@ -349,13 +349,13 @@ function Events() {
   const schedule = [
     {
       icon: CalendarDays,
-      label: "Mornings",
-      detail: "Tuesday–Friday at 10:00 AM",
+      label: "Dates",
+      detail: "Monday–Friday, August 3–7",
     },
     {
       icon: Clock3,
-      label: "Evenings",
-      detail: "Monday–Friday at 7:00 PM",
+      label: "Nightly",
+      detail: "6:30 – 8:15 PM",
     },
     {
       icon: MapPin,
@@ -370,15 +370,15 @@ function Events() {
         <div className="mx-auto max-w-3xl text-center">
           <p className="fine-label mb-4 text-sky-100">Upcoming Event</p>
           <h2 className="font-serif text-4xl font-semibold sm:text-5xl">
-            You&rsquo;re invited to Camp Meeting.
+            Bring the kids to VBS.
           </h2>
         </div>
 
         <div className="mt-12 grid overflow-hidden rounded-lg border border-white/10 bg-white/5 soft-shadow lg:grid-cols-2">
           <div className="relative min-h-[260px] lg:min-h-full">
             <Image
-              src="/camp-meeting.jpg"
-              alt="Camp Meeting at Highland Hills Baptist Church"
+              src="/vbs.jpg"
+              alt="Emerald Crossing VBS at Highland Hills Baptist Church"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"
@@ -388,14 +388,15 @@ function Events() {
           <div className="p-8 sm:p-10">
             <span className="button-light inline-flex items-center gap-2 rounded-md bg-white px-4 py-2 text-sm font-extrabold">
               <CalendarDays className="h-4 w-4" />
-              June 7&ndash;12
+              August 3&ndash;7
             </span>
             <h3 className="mt-6 font-serif text-3xl font-semibold">
-              Camp Meeting
+              Emerald Crossing VBS
             </h3>
             <p className="mt-3 leading-7 text-white/70">
-              A week of preaching, worship, and fellowship under the tent. All
-              are welcome &mdash; bring your family and a friend.
+              An Irish adventure through Psalm 23 &mdash; a week of Bible
+              lessons, songs, crafts, and fun for kids. All are welcome
+              &mdash; bring your family and a friend.
             </p>
 
             <div className="mt-7 space-y-4">
