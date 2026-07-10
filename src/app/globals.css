@@ -89,3 +89,10 @@ a {
 .hhbc-nav-link:hover {
   color: #ffffff !important;
 }
+
+/* WBC live chat bubble — white ring so it stands out on dark sections and
+   frames the pastor's photo. */
+#wbc-chat-bubble {
+  border: 3px solid #ffffff !important;
+  box-shadow: 0 4px 20px rgba(6, 26, 52, 0.4) !important;
+}
