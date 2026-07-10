@@ -6,15 +6,15 @@ import { useEffect, useState } from "react";
 
 const navLinks = [
   { href: "#home", label: "Home" },
-  { href: "#visit", label: "Visit" },
+  { href: "/what-to-expect", label: "Visit" },
+  { href: "/what-we-believe", label: "Beliefs" },
+  { href: "/ministries", label: "Ministries" },
   { href: "#events", label: "Events" },
-  { href: "#calendar", label: "Calendar" },
+  { href: "/calendar", label: "Calendar" },
   { href: "/sermons", label: "Sermons" },
   { href: "#services", label: "Services" },
   { href: "#pastor", label: "Pastor" },
   { href: "/salvation", label: "Salvation" },
-  { href: "#ministries", label: "Ministries" },
-  { href: "#connect", label: "Connect" },
 ];
 
 export default function Navbar() {

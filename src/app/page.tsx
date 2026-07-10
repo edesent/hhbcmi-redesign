@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import {
   ArrowRight,
   BookOpen,
@@ -13,6 +14,7 @@ import {
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import CalendarFeed from "@/components/CalendarFeed";
+import Footer from "@/components/Footer";
 
 const serviceTimes = [
   { day: "Sunday", title: "Sunday School", time: "10:00 AM" },
@@ -428,15 +430,23 @@ function Events() {
               })}
             </div>
 
-            <a
-              href="https://maps.app.goo.gl/4PUyrLZwsXvrzKzf6"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="button-light lift-link mt-8 inline-flex items-center justify-center gap-2 rounded-md bg-white px-7 py-4 text-sm font-extrabold hover:bg-sky-100"
-            >
-              Get Directions
-              <ArrowRight className="h-4 w-4" />
-            </a>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link
+                href="/vbs"
+                className="button-light lift-link inline-flex items-center justify-center gap-2 rounded-md bg-white px-7 py-4 text-sm font-extrabold hover:bg-sky-100"
+              >
+                VBS Details
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+              <a
+                href="https://maps.app.goo.gl/4PUyrLZwsXvrzKzf6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="lift-link inline-flex items-center justify-center gap-2 rounded-md border border-white/30 px-7 py-4 text-sm font-extrabold text-white hover:bg-white/10"
+              >
+                Get Directions
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -517,6 +527,16 @@ function Groups() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-12 text-center">
+          <Link
+            href="/ministries"
+            className="button-light lift-link inline-flex items-center justify-center gap-2 rounded-md bg-white px-7 py-4 text-sm font-extrabold hover:bg-sky-100"
+          >
+            Explore All Ministries
+            <ArrowRight className="h-4 w-4" />
+          </Link>
         </div>
       </div>
     </section>
@@ -781,41 +801,3 @@ function Location() {
   );
 }
 
-function Footer() {
-  return (
-    <footer className="border-t border-sky-100 bg-white-soft py-12 text-navy-950">
-      <div className="section-shell flex flex-col items-center justify-between gap-8 text-center md:flex-row md:text-left">
-        <div>
-          <Image
-            src="/highland-hills-baptist-logo-dark.svg"
-            alt="Highland Hills Baptist Church"
-            width={300}
-            height={85}
-            className="mx-auto h-auto w-56 md:mx-0"
-          />
-          <p className="mt-3 text-sm text-muted">
-            179 Woodruff Lake Rd | Highland, MI 48357 | (248) 887-0698
-          </p>
-        </div>
-        <div className="flex gap-3">
-          <a
-            href="https://www.facebook.com/HHBC1611/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-md border border-navy-900/20 px-4 py-2 text-sm font-bold text-navy-950 hover:bg-sky-100"
-          >
-            Facebook
-          </a>
-          <a
-            href="https://www.youtube.com/@highlandhillsbaptistchurch4533"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-md border border-navy-900/20 px-4 py-2 text-sm font-bold text-navy-950 hover:bg-sky-100"
-          >
-            YouTube
-          </a>
-        </div>
-      </div>
-    </footer>
-  );
-}
