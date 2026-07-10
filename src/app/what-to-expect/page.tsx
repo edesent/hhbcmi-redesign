@@ -79,9 +79,26 @@ const services = [
   { day: "Wednesday", title: "Prayer & Bible Study", time: "7:00 PM" },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.a,
+    },
+  })),
+};
+
 export default function WhatToExpectPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Navbar />
       <main className="bg-cream">
         <section className="bg-navy-950 pb-16 pt-36 text-white">
