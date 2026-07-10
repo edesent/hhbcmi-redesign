@@ -127,7 +127,7 @@ export default function WhatToExpectPage() {
                     key={item.q}
                     className="rounded-lg border border-sky-100 bg-white p-7 soft-shadow"
                   >
-                    <span className="button-light flex h-12 w-12 items-center justify-center rounded-md bg-navy-900 text-white">
+                    <span className="flex h-12 w-12 items-center justify-center rounded-md bg-navy-900 text-white">
                       <Icon className="h-5 w-5" />
                     </span>
                     <h2 className="mt-5 font-serif text-2xl font-semibold text-navy-950">

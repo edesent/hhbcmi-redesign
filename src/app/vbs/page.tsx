@@ -133,7 +133,7 @@ export default function VbsPage() {
                     key={detail.label}
                     className="rounded-lg border border-sky-100 bg-white p-6 text-center soft-shadow"
                   >
-                    <span className="button-light mx-auto flex h-12 w-12 items-center justify-center rounded-md bg-navy-900 text-gold">
+                    <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-md bg-navy-900 text-gold">
                       <Icon className="h-5 w-5" />
                     </span>
                     <p className="mt-4 text-sm font-bold text-blue-700">
