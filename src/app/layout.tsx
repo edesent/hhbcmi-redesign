@@ -104,7 +104,18 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${newsreader.variable} ${dancingScript.variable} antialiased`}
     >
-      <body>{children}</body>
+      <body>
+        {children}
+        {/* WBC live chat widget — parser-inserted <script> so the widget can
+            read its own data-* attributes via document.currentScript. */}
+        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+        <script
+          src="https://slackwebsitechat.vercel.app/widget/wbc-chat.js"
+          data-api="https://slackwebsitechat.vercel.app"
+          data-key="wbc_7fb8d129822c0a7c135a40815fe28762adff2d54d7e8b473"
+          defer
+        />
+      </body>
     </html>
   );
 }
