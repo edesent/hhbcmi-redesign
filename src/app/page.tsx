@@ -1,14 +1,18 @@
 import Image from "next/image";
 import {
   ArrowRight,
+  Baby,
+  Backpack,
   BookOpen,
   CalendarDays,
   Clock3,
+  Flower2,
   Globe2,
   HandHeart,
   HeartHandshake,
   MapPin,
   PlayCircle,
+  Users,
   UsersRound,
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -37,6 +41,34 @@ const ministries = [
     title: "Weekly Connection",
     text: "Prayer meeting, Bible study, events, and livestreams help the church stay close.",
     icon: CalendarDays,
+  },
+];
+
+const groups = [
+  {
+    label: "Kids / VBS",
+    icon: Baby,
+    text: "Sunday School, our Wednesday children's program, and summer VBS.",
+  },
+  {
+    label: "Teens",
+    icon: Backpack,
+    text: "A place for students to grow in their faith and build real friendships.",
+  },
+  {
+    label: "Men",
+    icon: Users,
+    text: "Fellowship and discipleship that sharpen men in their walk with God.",
+  },
+  {
+    label: "Women",
+    icon: Flower2,
+    text: "Bible study, encouragement, and friendship for every season of life.",
+  },
+  {
+    label: "Seniors",
+    icon: BookOpen,
+    text: "Fellowship, care, and ministry for our senior saints.",
   },
 ];
 
@@ -158,6 +190,7 @@ export default function Home() {
         <Events />
         <CalendarFeed />
         <ServiceRhythm />
+        <Groups />
         <Pastor />
         <Ministries />
         <Connect />
@@ -466,6 +499,49 @@ function ServiceRhythm() {
         <p className="mt-8 text-center text-base font-semibold text-muted">
           Nursery available for all services.
         </p>
+      </div>
+    </section>
+  );
+}
+
+function Groups() {
+  return (
+    <section id="groups" className="bg-navy-950 py-24 text-white">
+      <div className="section-shell">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="fine-label mb-4 text-sky-100">For Every Stage of Life</p>
+          <h2 className="font-serif text-4xl font-semibold sm:text-5xl">
+            Connect with people like you.
+          </h2>
+          <p className="mt-6 text-lg leading-8 text-white/70">
+            God made us for community. Whatever season you are in, there is a
+            place for you and your family at Highland Hills.
+          </p>
+        </div>
+
+        <div className="mt-14 grid grid-cols-2 gap-4 sm:gap-5 md:grid-cols-3 lg:grid-cols-5">
+          {groups.map((group) => {
+            const Icon = group.icon;
+
+            return (
+              <div
+                key={group.label}
+                className="group relative flex aspect-[4/5] flex-col justify-end overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 sm:p-6 soft-shadow"
+              >
+                <span className="button-light absolute left-5 top-5 flex h-11 w-11 items-center justify-center rounded-md bg-white">
+                  <Icon className="h-5 w-5" />
+                </span>
+                <h3 className="font-serif text-2xl font-semibold text-white">
+                  {group.label}
+                </h3>
+                <span className="mt-2 block h-[3px] w-10 rounded bg-gold transition-all duration-300 group-hover:w-16" />
+                <p className="mt-3 text-sm leading-6 text-white/70">
+                  {group.text}
+                </p>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
