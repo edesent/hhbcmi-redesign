@@ -1,18 +1,14 @@
 import Image from "next/image";
 import {
   ArrowRight,
-  Baby,
-  Backpack,
   BookOpen,
   CalendarDays,
   Clock3,
-  Flower2,
   Globe2,
   HandHeart,
   HeartHandshake,
   MapPin,
   PlayCircle,
-  Users,
   UsersRound,
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -45,31 +41,11 @@ const ministries = [
 ];
 
 const groups = [
-  {
-    label: "Kids / VBS",
-    icon: Baby,
-    text: "Sunday School, our Wednesday children's program, and summer VBS.",
-  },
-  {
-    label: "Teens",
-    icon: Backpack,
-    text: "A place for students to grow in their faith and build real friendships.",
-  },
-  {
-    label: "Men",
-    icon: Users,
-    text: "Fellowship and discipleship that sharpen men in their walk with God.",
-  },
-  {
-    label: "Women",
-    icon: Flower2,
-    text: "Bible study, encouragement, and friendship for every season of life.",
-  },
-  {
-    label: "Seniors",
-    icon: BookOpen,
-    text: "Fellowship, care, and ministry for our senior saints.",
-  },
+  { label: "Kids / VBS", photo: "/groups/children.jpg" },
+  { label: "Teens", photo: "/groups/youth.jpg" },
+  { label: "Men", photo: "/groups/men.jpg" },
+  { label: "Women", photo: "/groups/women.jpg" },
+  { label: "Seniors", photo: "/groups/seniors.jpg" },
 ];
 
 const churchSchema = {
@@ -520,27 +496,27 @@ function Groups() {
         </div>
 
         <div className="mt-14 grid grid-cols-2 gap-4 sm:gap-5 md:grid-cols-3 lg:grid-cols-5">
-          {groups.map((group) => {
-            const Icon = group.icon;
-
-            return (
-              <div
-                key={group.label}
-                className="group relative flex aspect-[4/5] flex-col justify-end overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 sm:p-6 soft-shadow"
-              >
-                <span className="button-light absolute left-5 top-5 flex h-11 w-11 items-center justify-center rounded-md bg-white">
-                  <Icon className="h-5 w-5" />
-                </span>
-                <h3 className="font-serif text-2xl font-semibold text-white">
+          {groups.map((group) => (
+            <div
+              key={group.label}
+              className="group relative flex aspect-[4/5] flex-col justify-end overflow-hidden rounded-2xl soft-shadow"
+            >
+              <Image
+                src={group.photo}
+                alt={group.label}
+                fill
+                sizes="(min-width: 1024px) 18vw, (min-width: 768px) 30vw, 45vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/25 to-transparent" />
+              <div className="relative p-5 sm:p-6">
+                <h3 className="font-serif text-2xl font-semibold text-white drop-shadow">
                   {group.label}
                 </h3>
                 <span className="mt-2 block h-[3px] w-10 rounded bg-gold transition-all duration-300 group-hover:w-16" />
-                <p className="mt-3 text-sm leading-6 text-white/70">
-                  {group.text}
-                </p>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       </div>
     </section>
