@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Bus, type LucideIcon } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -30,7 +30,16 @@ export const metadata: Metadata = {
   },
 };
 
-const ministries = [
+type Ministry = {
+  title: string;
+  when: string;
+  body: string;
+  photo?: string;
+  icon?: LucideIcon;
+  cta?: { href: string; label: string };
+};
+
+const ministries: Ministry[] = [
   {
     title: "Children's Ministry & VBS",
     photo: "/groups/children.jpg",
@@ -62,6 +71,12 @@ const ministries = [
     when: "Fellowship and ministry throughout the year",
     body: "We treasure the senior members of our church family. Through fellowship, care, and ministry opportunities, our senior saints continue to be a vital, active, and honored part of the life of Highland Hills Baptist Church.",
   },
+  {
+    title: "Bus Ministry",
+    icon: Bus,
+    when: "Free rides to and from Sunday services",
+    body: "Need a ride to church? Our bus ministry provides free transportation to and from our services for children and families across the Highland area. If you or your kids would like a ride, just give us a call and we will be glad to arrange a pickup.",
+  },
 ];
 
 export default function MinistriesPage() {
@@ -85,23 +100,35 @@ export default function MinistriesPage() {
 
         <section className="py-20">
           <div className="section-shell max-w-5xl space-y-16">
-            {ministries.map((ministry, index) => (
+            {ministries.map((ministry, index) => {
+              const Icon = ministry.icon;
+
+              return (
               <div
                 key={ministry.title}
                 className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12"
               >
                 <div
-                  className={`relative aspect-[4/3] overflow-hidden rounded-lg soft-shadow ${
+                  className={`relative flex aspect-[4/3] items-center justify-center overflow-hidden rounded-lg soft-shadow ${
                     index % 2 === 1 ? "lg:order-2" : ""
-                  }`}
+                  } ${ministry.photo ? "" : "bg-navy-950"}`}
                 >
-                  <Image
-                    src={ministry.photo}
-                    alt={ministry.title}
-                    fill
-                    sizes="(min-width: 1024px) 45vw, 100vw"
-                    className="object-cover"
-                  />
+                  {ministry.photo ? (
+                    <Image
+                      src={ministry.photo}
+                      alt={ministry.title}
+                      fill
+                      sizes="(min-width: 1024px) 45vw, 100vw"
+                      className="object-cover"
+                    />
+                  ) : (
+                    Icon && (
+                      <Icon
+                        className="h-24 w-24 text-gold"
+                        strokeWidth={1.25}
+                      />
+                    )
+                  )}
                 </div>
                 <div>
                   <h2 className="font-serif text-3xl font-semibold text-navy-950">
@@ -124,7 +151,8 @@ export default function MinistriesPage() {
                   )}
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </section>
 
