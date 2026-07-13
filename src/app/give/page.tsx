@@ -37,7 +37,7 @@ export default function GivePage() {
       />
       <Navbar />
       <main className="bg-cream">
-        <section className="bg-navy-950 pb-16 pt-36 text-white">
+        <section className="bg-navy-950 pb-12 pt-36 text-white">
           <div className="section-shell max-w-3xl text-center">
             <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-md bg-white text-navy-950">
               <HandHeart className="h-6 w-6" />
@@ -46,17 +46,42 @@ export default function GivePage() {
             <h1 className="mt-3 font-serif text-4xl font-semibold sm:text-5xl">
               Support the ministry of Highland Hills.
             </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-white/75">
-              Your generosity helps us preach the Gospel, care for our church
-              family, and reach our community and the mission field. Giving
-              online is simple and secure.
-            </p>
           </div>
         </section>
 
         <section className="py-16">
-          <div className="section-shell max-w-2xl">
-            <div className="rounded-lg border border-sky-100 bg-white p-4 soft-shadow sm:p-8">
+          <div className="section-shell grid max-w-5xl gap-10 lg:grid-cols-[1fr_500px] lg:items-start lg:gap-14">
+            <div className="lg:pt-4">
+              <p className="fine-label mb-4 text-blue-700">Ways to Give</p>
+              <h2 className="font-serif text-3xl font-semibold leading-tight text-navy-950 sm:text-4xl">
+                Give online, anytime.
+              </h2>
+              <p className="mt-6 text-lg leading-8 text-muted">
+                Your generosity helps us preach the Gospel, care for our church
+                family, and reach our community and the mission field. Giving
+                online is simple and secure — make a one-time gift or set up
+                recurring giving in just a moment.
+              </p>
+
+              <div className="mt-8 space-y-4">
+                <div className="flex gap-3 rounded-lg border border-sky-100 bg-white p-5">
+                  <ShieldCheck className="h-5 w-5 shrink-0 text-blue-700" />
+                  <p className="text-sm leading-6 text-muted">
+                    Giving is processed securely through Servant Keeper. Highland
+                    Hills never sees or stores your card information.
+                  </p>
+                </div>
+                <div className="flex gap-3 rounded-lg border border-sky-100 bg-white p-5">
+                  <Mail className="h-5 w-5 shrink-0 text-blue-700" />
+                  <p className="text-sm leading-6 text-muted">
+                    Prefer to give in person or by mail? Gifts can be sent to 179
+                    Woodruff Lake Rd, Highland, MI 48357.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="w-full rounded-lg border border-sky-100 bg-white p-4 soft-shadow sm:p-6">
               {/* The form is rendered by the Servant Keeper web component. */}
               <div
                 className="min-h-[520px]"
@@ -65,23 +90,6 @@ export default function GivePage() {
                     '<sk-giving-app web-id="hhbc-8" form-id="419"></sk-giving-app>',
                 }}
               />
-            </div>
-
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              <div className="flex gap-3 rounded-lg border border-sky-100 bg-white p-5">
-                <ShieldCheck className="h-5 w-5 shrink-0 text-blue-700" />
-                <p className="text-sm leading-6 text-muted">
-                  Giving is processed securely through Servant Keeper. Highland
-                  Hills never sees or stores your card information.
-                </p>
-              </div>
-              <div className="flex gap-3 rounded-lg border border-sky-100 bg-white p-5">
-                <Mail className="h-5 w-5 shrink-0 text-blue-700" />
-                <p className="text-sm leading-6 text-muted">
-                  Prefer to give in person or by mail? Gifts can be sent to 179
-                  Woodruff Lake Rd, Highland, MI 48357.
-                </p>
-              </div>
             </div>
           </div>
         </section>
