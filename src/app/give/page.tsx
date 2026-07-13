@@ -50,7 +50,7 @@ export default function GivePage() {
         </section>
 
         <section className="py-16">
-          <div className="section-shell grid max-w-5xl gap-10 lg:grid-cols-[1fr_500px] lg:items-start lg:gap-14">
+          <div className="section-shell grid max-w-6xl gap-10 lg:grid-cols-[1fr_700px] lg:items-start lg:gap-14">
             <div className="lg:pt-4">
               <p className="fine-label mb-4 text-blue-700">Ways to Give</p>
               <h2 className="font-serif text-3xl font-semibold leading-tight text-navy-950 sm:text-4xl">
