@@ -26,7 +26,7 @@ const footerLinks = [
       { href: "/ministries", label: "Ministries" },
       { href: "/vbs", label: "Vacation Bible School" },
       { href: "/sermons", label: "Sermons" },
-      { href: "https://giving.servantkeeper.com/hhbc-8/419", label: "Give" },
+      { href: "/give", label: "Give" },
     ],
   },
 ];

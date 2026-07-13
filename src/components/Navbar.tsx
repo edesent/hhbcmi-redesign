@@ -84,8 +84,8 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#give"
-            onClick={(event) => goToSection(event, "#give")}
+            href="/give"
+            onClick={(event) => goToSection(event, "/give")}
             className="lift-link ml-2 rounded-md bg-gold px-5 py-2.5 text-sm font-extrabold text-navy-950 hover:brightness-105"
           >
             Give
@@ -120,8 +120,8 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#give"
-            onClick={(event) => goToSection(event, "#give")}
+            href="/give"
+            onClick={(event) => goToSection(event, "/give")}
             className="mt-3 rounded-md bg-gold px-4 py-3 text-center text-base font-extrabold text-navy-950"
           >
             Give

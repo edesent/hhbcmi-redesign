@@ -730,15 +730,13 @@ function Give() {
             family, and reach our community and the mission field. Giving online
             is simple and secure.
           </p>
-          <a
-            href="https://giving.servantkeeper.com/hhbc-8/419"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/give"
             className="button-light lift-link mt-9 inline-flex items-center justify-center gap-2 rounded-md bg-white px-7 py-4 text-sm font-extrabold hover:bg-sky-100"
           >
             Give Online
             <ArrowRight className="h-4 w-4" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>
