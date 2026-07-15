@@ -73,7 +73,7 @@ const ministries: Ministry[] = [
   },
   {
     title: "Bus Ministry",
-    icon: Bus,
+    photo: "/groups/62e2469cd87930951228dd0b-church-bus.jpg",
     when: "Free rides to and from Sunday services",
     body: "Need a ride to church? Our bus ministry provides free transportation to and from our services for children and families across the Highland area. If you or your kids would like a ride, just give us a call and we will be glad to arrange a pickup.",
   },
