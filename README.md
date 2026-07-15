@@ -92,3 +92,21 @@ npm run build    # production build
 ```
 
 Auto-deploys to Vercel on every push to `main`.
+
+## 🚀 Deployment & analytics (operator notes)
+
+- **Auto-deploy:** connected to the Vercel project `hhbcmi-redesign` via the
+  GitHub git integration. Every push to `main` builds and deploys automatically;
+  the production alias is **www.hhbcmi.com**.
+- **Fork protection is OFF** on this project. It was previously **on**, which
+  silently **blocked** any push whose GitHub commit author had no linked Vercel
+  account — that included the church's own `HHBCMi` GitHub account, so the
+  pastor's edits were built for 0ms and never went live ("Deployment Blocked —
+  HHBCMi does not have a Vercel account linked to their GitHub account"). With
+  fork protection disabled, commits from the `HHBCMi` account deploy normally.
+  Repo visibility (public/private) has no effect on this.
+- If a deploy ever shows **BLOCKED** again, the fix is Vercel → Project →
+  Settings → Git → turn **Git Fork Protection** off (not a code change).
+- **Web Analytics** is enabled on the Vercel project, and the `<Analytics />`
+  tracker (`@vercel/analytics/next`) is wired into `src/app/layout.tsx` so page
+  views are actually collected. View them in the Vercel dashboard → Analytics.

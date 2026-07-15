@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Dancing_Script, Inter, Newsreader } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const inter = Inter({
@@ -115,6 +116,7 @@ export default function RootLayout({
           data-key="wbc_7fb8d129822c0a7c135a40815fe28762adff2d54d7e8b473"
           defer
         />
+        <Analytics />
       </body>
     </html>
   );

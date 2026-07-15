@@ -96,3 +96,8 @@ a {
   border: 3px solid #ffffff !important;
   box-shadow: 0 4px 20px rgba(6, 26, 52, 0.4) !important;
 }
+
+/* Hide the auto greeting-popup teaser — visitors just click the bubble. */
+#wbc-greeting-popup {
+  display: none !important;
+}
