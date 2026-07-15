@@ -98,15 +98,15 @@ Auto-deploys to Vercel on every push to `main`.
 - **Auto-deploy:** connected to the Vercel project `hhbcmi-redesign` via the
   GitHub git integration. Every push to `main` builds and deploys automatically;
   the production alias is **www.hhbcmi.com**.
-- **Fork protection is OFF** on this project. It was previously **on**, which
-  silently **blocked** any push whose GitHub commit author had no linked Vercel
-  account — that included the church's own `HHBCMi` GitHub account, so the
-  pastor's edits were built for 0ms and never went live ("Deployment Blocked —
-  HHBCMi does not have a Vercel account linked to their GitHub account"). With
-  fork protection disabled, commits from the `HHBCMi` account deploy normally.
-  Repo visibility (public/private) has no effect on this.
-- If a deploy ever shows **BLOCKED** again, the fix is Vercel → Project →
-  Settings → Git → turn **Git Fork Protection** off (not a code change).
+- **This repo is PUBLIC — keep it that way.** On a Vercel Pro team, a **private**
+  repo only deploys commits authored by a Vercel team member; a commit from the
+  church's own `HHBCMi` GitHub account (not a team member) gets silently
+  **BLOCKED** ("Deployment Blocked — HHBCMi does not have a Vercel account linked
+  to their GitHub account"). Vercel makes collaboration **free for public repos**,
+  so as a public repo the `HHBCMi` account's pushes deploy normally. (Fork
+  protection is unrelated — it only affects pull requests from forks.)
+- If a deploy ever shows **BLOCKED** again: confirm the repo is still **public**,
+  or have the commit authored by an account on the Vercel team. Not a code change.
 - **Web Analytics** is enabled on the Vercel project, and the `<Analytics />`
   tracker (`@vercel/analytics/next`) is wired into `src/app/layout.tsx` so page
   views are actually collected. View them in the Vercel dashboard → Analytics.
