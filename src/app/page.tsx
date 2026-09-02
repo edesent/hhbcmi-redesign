@@ -466,6 +466,69 @@ function Events() {
             </div>
           </div>
         </div>
+
+        <div className="mt-12 grid overflow-hidden rounded-lg border border-white/10 bg-white/5 soft-shadow lg:grid-cols-2">
+          <div className="relative min-h-[320px] lg:min-h-full">
+            <Image
+              src="/events/chatgpt-image-aug-12-2026-08-20-59-pm.png"
+              alt="Men's Retreat September 17-19 event flyer"
+              fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover"
+            />
+          </div>
+
+          <div className="p-8 sm:p-10">
+            <span className="button-light inline-flex items-center gap-2 rounded-md bg-white px-4 py-2 text-sm font-extrabold">
+              <CalendarDays className="h-4 w-4" />
+              September 17–19
+            </span>
+            <h3 className="mt-6 font-serif text-3xl font-semibold">
+              Men&apos;s Retreat
+            </h3>
+            <p className="mt-3 leading-7 text-white/70">
+              A special weekend for men featuring great food, fellowship, fun,
+              and devotionals.
+            </p>
+
+            <div className="mt-7 space-y-4">
+              <div className="flex items-start gap-4">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-white/10 text-gold">
+                  <CalendarDays className="h-5 w-5" />
+                </span>
+                <div>
+                  <p className="text-sm font-bold text-white">Date</p>
+                  <p className="text-sm text-white/70">September 17–19, 2026</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-white/10 text-gold">
+                  <HandHeart className="h-5 w-5" />
+                </span>
+                <div>
+                  <p className="text-sm font-bold text-white">Cost</p>
+                  <p className="text-sm text-white/70">$130</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-white/10 text-gold">
+                  <MapPin className="h-5 w-5" />
+                </span>
+                <div>
+                  <p className="text-sm font-bold text-white">Location</p>
+                  <p className="text-sm text-white/70">9298 Hillcrest Dr, Reed City, MI 49677</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-8 rounded-md border border-white/10 bg-white/5 p-5">
+              <p className="text-sm font-bold text-white">What&apos;s Included</p>
+              <p className="mt-1 text-sm leading-6 text-white/70">
+                Great food, fellowship, fun, and devotionals.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
