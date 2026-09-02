@@ -360,18 +360,23 @@ function Events() {
   const schedule = [
     {
       icon: CalendarDays,
-      label: "Dates",
-      detail: "Monday–Friday, August 3–7",
+      label: "Date",
+      detail: "Saturday, September 12",
     },
     {
       icon: Clock3,
-      label: "Nightly",
-      detail: "6:30 – 8:15 PM",
+      label: "Time",
+      detail: "10:00 AM – 2:00 PM",
+    },
+    {
+      icon: UsersRound,
+      label: "For Teens",
+      detail: "Ages 12 & up",
     },
     {
       icon: MapPin,
       label: "Location",
-      detail: "Highland Hills Baptist Church",
+      detail: "179 Woodruff Lake Rd, Highland, MI 48357",
     },
   ];
 
@@ -381,15 +386,18 @@ function Events() {
         <div className="mx-auto max-w-3xl text-center">
           <p className="fine-label mb-4 text-sky-100">Upcoming Event</p>
           <h2 className="font-serif text-4xl font-semibold sm:text-5xl">
-            Bring the kids to VBS.
+            Promised Land Experience
           </h2>
+          <p className="mt-5 text-lg leading-8 text-white/70">
+            A free one-day camp experience for teens ages 12 and up.
+          </p>
         </div>
 
         <div className="mt-12 grid overflow-hidden rounded-lg border border-white/10 bg-white/5 soft-shadow lg:grid-cols-2">
-          <div className="relative min-h-[260px] lg:min-h-full">
+          <div className="relative min-h-[320px] lg:min-h-full">
             <Image
-              src="/vbs.jpg"
-              alt="Emerald Crossing VBS at Highland Hills Baptist Church"
+              src="/events/file-000000003ad481f6acff31faabffcef1.png"
+              alt="Promised Land Experience event flyer"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"
@@ -399,15 +407,16 @@ function Events() {
           <div className="p-8 sm:p-10">
             <span className="button-light inline-flex items-center gap-2 rounded-md bg-white px-4 py-2 text-sm font-extrabold">
               <CalendarDays className="h-4 w-4" />
-              August 3&ndash;7
+              Saturday, September 12
             </span>
             <h3 className="mt-6 font-serif text-3xl font-semibold">
-              Emerald Crossing VBS
+              Camp Promised Land Presents
             </h3>
             <p className="mt-3 leading-7 text-white/70">
-              An Irish adventure through Psalm 23 &mdash; a week of Bible
-              lessons, songs, crafts, and fun for kids. All are welcome
-              &mdash; bring your family and a friend.
+              Join us for a <strong className="text-white">FREE</strong>{" "}
+              one-day, jam-packed camp experience with exciting games, team
+              competitions, powerful Bible preaching, food, fellowship, and fun.
+              Lunch is provided!
             </p>
 
             <div className="mt-7 space-y-4">
@@ -430,21 +439,29 @@ function Events() {
               })}
             </div>
 
+            <div className="mt-8 rounded-md border border-white/10 bg-white/5 p-5">
+              <p className="text-sm font-bold text-white">Guest Preacher</p>
+              <p className="mt-1 text-lg font-semibold text-sky-100">
+                Mario Chadinha Jr.
+              </p>
+              <p className="mt-1 text-sm text-white/60">Camp Director</p>
+            </div>
+
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                href="/vbs"
-                className="button-light lift-link inline-flex items-center justify-center gap-2 rounded-md bg-white px-7 py-4 text-sm font-extrabold hover:bg-sky-100"
-              >
-                VBS Details
-                <ArrowRight className="h-4 w-4" />
-              </Link>
               <a
                 href="https://maps.app.goo.gl/4PUyrLZwsXvrzKzf6"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="lift-link inline-flex items-center justify-center gap-2 rounded-md border border-white/30 px-7 py-4 text-sm font-extrabold text-white hover:bg-white/10"
+                className="button-light lift-link inline-flex items-center justify-center gap-2 rounded-md bg-white px-7 py-4 text-sm font-extrabold hover:bg-sky-100"
               >
                 Get Directions
+                <ArrowRight className="h-4 w-4" />
+              </a>
+              <a
+                href="tel:+12488870698"
+                className="lift-link inline-flex items-center justify-center gap-2 rounded-md border border-white/30 px-7 py-4 text-sm font-extrabold text-white hover:bg-white/10"
+              >
+                Questions? Call Us
               </a>
             </div>
           </div>
