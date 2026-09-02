@@ -112,17 +112,17 @@ const churchSchema = {
   ],
 };
 
-const vbsSchema = {
+const promisedLandSchema = {
   "@context": "https://schema.org",
   "@type": "Event",
-  name: "Emerald Crossing VBS",
+  name: "Promised Land Experience",
   description:
-    "Vacation Bible School at Highland Hills Baptist Church — Emerald Crossing: An Irish Adventure Through Psalm 23. A week of Bible lessons, songs, crafts, and fun for kids. All are welcome.",
-  startDate: "2026-08-03T18:30",
-  endDate: "2026-08-07T20:15",
+    "A free one-day, jam-packed camp experience for teens ages 12 and up, with exciting games, team competitions, powerful Bible preaching, food, fellowship, and fun.",
+  startDate: "2026-09-12T10:00",
+  endDate: "2026-09-12T14:00",
   eventStatus: "https://schema.org/EventScheduled",
   eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-  image: "https://www.hhbcmi.com/vbs.jpg",
+  image: "https://www.hhbcmi.com/events/file-000000003ad481f6acff31faabffcef1.png",
   location: {
     "@type": "Place",
     name: "Highland Hills Baptist Church",
