@@ -121,10 +121,6 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(churchSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(promisedLandSchema) }}
-      />
       <Navbar />
       <main id="home" className="overflow-hidden bg-cream">
         <Hero />
