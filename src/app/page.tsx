@@ -529,6 +529,71 @@ function Events() {
             </div>
           </div>
         </div>
+
+        <div className="mt-12 grid overflow-hidden rounded-lg border border-white/10 bg-white/5 soft-shadow lg:grid-cols-2">
+          <div className="relative min-h-[320px] lg:min-h-full">
+            <Image
+              src="/events/be1f7cca-3fd1-466e-9fdc-aa41cf061ff1.png"
+              alt="COBEAC retreat event featuring speaker Charity Berkey"
+              fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover"
+            />
+          </div>
+
+          <div className="p-8 sm:p-10">
+            <span className="button-light inline-flex items-center gap-2 rounded-md bg-white px-4 py-2 text-sm font-extrabold">
+              <CalendarDays className="h-4 w-4" />
+              October 16–17, 2026
+            </span>
+            <h3 className="mt-6 font-serif text-3xl font-semibold">
+              COBEAC Retreat
+            </h3>
+            <p className="mt-3 leading-7 text-white/70">
+              Join us at COBEAC Camp &amp; Retreat Center with speaker Charity
+              Berkey.
+            </p>
+
+            <div className="mt-7 space-y-4">
+              <div className="flex items-start gap-4">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-white/10 text-gold">
+                  <CalendarDays className="h-5 w-5" />
+                </span>
+                <div>
+                  <p className="text-sm font-bold text-white">Date</p>
+                  <p className="text-sm text-white/70">October 16–17, 2026</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-white/10 text-gold">
+                  <HandHeart className="h-5 w-5" />
+                </span>
+                <div>
+                  <p className="text-sm font-bold text-white">Cost</p>
+                  <p className="text-sm text-white/70">$100</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-white/10 text-gold">
+                  <UsersRound className="h-5 w-5" />
+                </span>
+                <div>
+                  <p className="text-sm font-bold text-white">Speaker</p>
+                  <p className="text-sm text-white/70">Charity Berkey</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-white/10 text-gold">
+                  <MapPin className="h-5 w-5" />
+                </span>
+                <div>
+                  <p className="text-sm font-bold text-white">Location</p>
+                  <p className="text-sm text-white/70">COBEAC Camp &amp; Retreat Center</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
