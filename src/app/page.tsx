@@ -324,7 +324,7 @@ function Events() {
         <div className="mt-12 grid overflow-hidden rounded-lg border border-white/10 bg-white/5 soft-shadow lg:grid-cols-2">
           <div className="relative min-h-[320px] lg:min-h-full">
             <Image
-              src="/events/be1f7cca-3fd1-466e-9fdc-aa41cf061ff1.png"
+              src="/events/file-00000000b32881f5b146caa16139ac1b.png"
               alt="COBEAC retreat event featuring speaker Charity Berkey"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
