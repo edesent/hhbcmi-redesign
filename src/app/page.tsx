@@ -112,42 +112,7 @@ const churchSchema = {
   ],
 };
 
-const promisedLandSchema = {
-  "@context": "https://schema.org",
-  "@type": "Event",
-  name: "Promised Land Experience",
-  description:
-    "A free one-day, jam-packed camp experience for teens ages 12 and up, with exciting games, team competitions, powerful Bible preaching, food, fellowship, and fun.",
-  startDate: "2026-09-12T10:00",
-  endDate: "2026-09-12T14:00",
-  eventStatus: "https://schema.org/EventScheduled",
-  eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-  image: "https://www.hhbcmi.com/events/file-000000003ad481f6acff31faabffcef1.png",
-  location: {
-    "@type": "Place",
-    name: "Highland Hills Baptist Church",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "179 Woodruff Lake Rd",
-      addressLocality: "Highland",
-      addressRegion: "MI",
-      postalCode: "48357",
-      addressCountry: "US",
-    },
-  },
-  organizer: {
-    "@type": "Church",
-    name: "Highland Hills Baptist Church",
-    url: "https://www.hhbcmi.com",
-  },
-  offers: {
-    "@type": "Offer",
-    price: "0",
-    priceCurrency: "USD",
-    availability: "https://schema.org/InStock",
-    url: "https://www.hhbcmi.com/",
-  },
-};
+
 
 export default function Home() {
   return (
