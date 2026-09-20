@@ -321,16 +321,6 @@ function Events() {
   return (
     <section id="events" className="bg-navy-950 py-24 text-white">
       <div className="section-shell">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="fine-label mb-4 text-sky-100">Upcoming Event</p>
-          <h2 className="font-serif text-4xl font-semibold sm:text-5xl">
-            Promised Land Experience
-          </h2>
-          <p className="mt-5 text-lg leading-8 text-white/70">
-            A free one-day camp experience for teens ages 12 and up.
-          </p>
-        </div>
-
         <div className="mt-12 grid overflow-hidden rounded-lg border border-white/10 bg-white/5 soft-shadow lg:grid-cols-2">
           <div className="relative min-h-[320px] lg:min-h-full">
             <Image
