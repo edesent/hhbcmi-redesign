@@ -318,29 +318,6 @@ function Welcome() {
 }
 
 function Events() {
-  const schedule = [
-    {
-      icon: CalendarDays,
-      label: "Date",
-      detail: "Saturday, September 12",
-    },
-    {
-      icon: Clock3,
-      label: "Time",
-      detail: "10:00 AM – 2:00 PM",
-    },
-    {
-      icon: UsersRound,
-      label: "For Teens",
-      detail: "Ages 12 & up",
-    },
-    {
-      icon: MapPin,
-      label: "Location",
-      detail: "179 Woodruff Lake Rd, Highland, MI 48357",
-    },
-  ];
-
   return (
     <section id="events" className="bg-navy-950 py-24 text-white">
       <div className="section-shell">
