@@ -114,6 +114,8 @@ export default function RootLayout({
           src="https://slackwebsitechat.vercel.app/widget/wbc-chat.js"
           data-api="https://slackwebsitechat.vercel.app"
           data-key="wbc_7fb8d129822c0a7c135a40815fe28762adff2d54d7e8b473"
+          data-brand-color="#0a2447"
+          data-accent-color="#d7b56d"
           defer
         />
         <Analytics />
