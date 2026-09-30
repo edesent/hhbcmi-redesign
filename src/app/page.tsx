@@ -566,9 +566,9 @@ function Ministries() {
             Built around the things a church family actually needs.
           </h2>
           <p className="mt-6 text-lg leading-8 text-white/70">
-            The redesign gives first-time guests the same clear path the church
-            already offers in person: worship, care for children, fellowship,
-            and steady communication.
+            First-time guests will find the same clear path the church offers in
+            person: worship, care for children, fellowship, and steady
+            communication.
           </p>
         </div>
 
