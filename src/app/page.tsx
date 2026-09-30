@@ -609,9 +609,9 @@ function Connect() {
             Follow what is happening at HHBC throughout the week.
           </h2>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-muted">
-            The new design turns Facebook and YouTube into clear, beautiful
-            pathways for updates, livestreams, and recent services without
-            making guests hunt for them.
+            Stay connected through Facebook and YouTube, with easy access to church
+            updates, livestreams, and recent services—all in one convenient
+            place.
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <a
