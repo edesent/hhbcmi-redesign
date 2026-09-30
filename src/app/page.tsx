@@ -328,7 +328,7 @@ function Events() {
               alt="COBEAC retreat event featuring speaker Charity Berkey"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover"
+              className="object-contain"
             />
           </div>
 
