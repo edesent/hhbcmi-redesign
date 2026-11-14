@@ -320,106 +320,41 @@ function Events() {
   return (
     <section id="events" className="bg-navy-950 py-24 text-white">
       <div className="section-shell">
-        <div className="mt-10 grid overflow-hidden rounded-lg border border-white/10 bg-white/5 soft-shadow lg:grid-cols-2">
-          <div className="relative min-h-[320px] lg:min-h-full">
-            <Image
-              src="/events/chatgpt-image-oct-11-2026-08-34-25-am.png"
-              alt="Family Fall Fest flyer with hay rides, horse riding, bonfire, and chili cookoff"
-              fill
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-contain"
-            />
-          </div>
-          <div className="p-8 sm:p-10">
-            <span className="button-light inline-flex items-center gap-2 rounded-md bg-white px-4 py-2 text-sm font-extrabold">
-              <CalendarDays className="h-4 w-4" />
-              October 24, 2026 · 3:00 PM
-            </span>
-            <h3 className="mt-6 font-serif text-3xl font-semibold">
-              Family Fall Fest
-            </h3>
-            <p className="mt-3 leading-7 text-white/70">
-              Bring the family for an afternoon of fall fun, food, and fellowship!
-            </p>
-            <div className="mt-7 space-y-4">
-              <div className="flex items-start gap-4">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="fine-label mb-4 text-sky-100">Church Events</p>
+          <h2 className="font-serif text-4xl font-semibold sm:text-5xl">
+            Join us for our upcoming events.
+          </h2>
+        </div>
+        <div className="mt-10 overflow-hidden rounded-lg border border-white/10 bg-white/5 soft-shadow">
+          <div className="grid lg:grid-cols-2">
+            <div className="relative min-h-[320px] lg:min-h-[480px]">
+              <Image
+                src="/events/rustic-thanksgiving-dinner-announcement.png"
+                alt="Thanksgiving Dinner, November 15th following the morning service"
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-contain"
+              />
+            </div>
+            <div className="flex flex-col justify-center p-8 sm:p-10">
+              <span className="button-light inline-flex w-fit items-center gap-2 rounded-md bg-white px-4 py-2 text-sm font-extrabold">
+                <CalendarDays className="h-4 w-4" />
+                November 15, 2026
+              </span>
+              <h3 className="mt-6 font-serif text-3xl font-semibold">
+                Thanksgiving Dinner
+              </h3>
+              <p className="mt-3 leading-7 text-white/70">
+                Join us for Thanksgiving dinner following the morning service.
+              </p>
+              <div className="mt-7 flex items-start gap-4">
                 <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-white/10 text-gold">
-                  <CalendarDays className="h-5 w-5" />
+                  <Clock3 className="h-5 w-5" />
                 </span>
                 <div>
                   <p className="text-sm font-bold text-white">Date &amp; Time</p>
-                  <p className="text-sm text-white/70">October 24 at 3:00 PM</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-white/10 text-gold">
-                  <UsersRound className="h-5 w-5" />
-                </span>
-                <div>
-                  <p className="text-sm font-bold text-white">Activities</p>
-                  <p className="text-sm text-white/70">Hay rides, horse riding, bonfire, and chili cookoff</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-white/10 text-gold">
-                  <MapPin className="h-5 w-5" />
-                </span>
-                <div>
-                  <p className="text-sm font-bold text-white">Location</p>
-                  <p className="text-sm text-white/70">Highland Hills Baptist Church, 179 Woodruff Lake Road, Highland</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-10 grid overflow-hidden rounded-lg border border-white/10 bg-white/5 soft-shadow lg:grid-cols-2">
-          <div className="relative min-h-[320px] lg:min-h-full">
-            <Image
-              src="/events/file-000000008e2081f59780e6686916755e.png"
-              alt="Fall Revival October 25–28 featuring guest speaker Stephen Griffis and special music by the Griffis Family"
-              fill
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-contain"
-            />
-          </div>
-          <div className="p-8 sm:p-10">
-            <span className="button-light inline-flex items-center gap-2 rounded-md bg-white px-4 py-2 text-sm font-extrabold">
-              <CalendarDays className="h-4 w-4" />
-              October 25–28, 2026
-            </span>
-            <h3 className="mt-6 font-serif text-3xl font-semibold">
-              Fall Revival
-            </h3>
-            <p className="mt-3 leading-7 text-white/70">
-              Join us for Fall Revival with guest speaker Stephen Griffis and special music by the Griffis Family.
-            </p>
-            <div className="mt-7 space-y-4">
-              <div className="flex items-start gap-4">
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-white/10 text-gold">
-                  <CalendarDays className="h-5 w-5" />
-                </span>
-                <div>
-                  <p className="text-sm font-bold text-white">Service Times</p>
-                  <p className="text-sm text-white/70">Sunday: 10 AM, 11 AM, and 6 PM<br />Monday–Wednesday: 7 PM</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-white/10 text-gold">
-                  <UsersRound className="h-5 w-5" />
-                </span>
-                <div>
-                  <p className="text-sm font-bold text-white">Guest Speaker &amp; Special Music</p>
-                  <p className="text-sm text-white/70">Stephen Griffis · Griffis Family</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-white/10 text-gold">
-                  <MapPin className="h-5 w-5" />
-                </span>
-                <div>
-                  <p className="text-sm font-bold text-white">Location</p>
-                  <p className="text-sm text-white/70">Highland Hills Baptist Church, 179 Woodruff Lake Rd, Highland, MI 48357</p>
+                  <p className="text-sm text-white/70">November 15th, following the morning service</p>
                 </div>
               </div>
             </div>
@@ -774,4 +709,3 @@ function Location() {
     </section>
   );
 }
-
