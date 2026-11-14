@@ -126,7 +126,6 @@ export default function Home() {
         <Hero />
         <ActionBar />
         <Welcome />
-        <Events />
         <CalendarFeed />
         <ServiceRhythm />
         <Groups />
