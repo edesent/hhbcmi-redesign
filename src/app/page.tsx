@@ -127,6 +127,7 @@ export default function Home() {
         <ActionBar />
         <Welcome />
         <CalendarFeed />
+        <Events />
         <ServiceRhythm />
         <Groups />
         <Pastor />
